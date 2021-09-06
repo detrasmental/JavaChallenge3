@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 // Write password to the #password input
 function writePassword() {
    
@@ -15,6 +16,7 @@ function generatePassword() {
 
     var validator = false;
     var passlength = 0;
+   
    
     while (!validator) {
         passlength = parseInt(prompt("Please enter a password length between 8-128 characters"));
@@ -33,6 +35,7 @@ function generatePassword() {
             alert("Sorry, that is not a valid a number. Please try again");
         }
     }
+
    
     var specialChk = false;
     var numericChk = false;
@@ -46,6 +49,7 @@ function generatePassword() {
     var passwordHolder = "";
     var randomsymbolsStr = "";
     var randomePos = 0;
+     
 
 
     // asks the user if they want to use uppercase letters
@@ -87,15 +91,29 @@ function generatePassword() {
     }
   
     return passwordHolder;
-   
-  
+     
 }
 function getRandomSymbol(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
+function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("myInput");
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+    
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
 
 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
