@@ -67,7 +67,7 @@ function generatePassword() {
 
     // asks the user if they want to use uppercase letters
     while ((!lowcaseChar) && (!uppercaseChar) && (!numericChar) && (!specialChar)) {
-        alert("Choose at least 1 of the following options for the password")
+        alert("Choose at least one of the following options for your password")
         uppercaseChar = confirm("Would you like to use uppercase letters for your password?");
         if (uppercaseChar) {
             setOfKeys = setOfKeys + uppercaseSet;
